@@ -1,0 +1,19 @@
+.container{
+    padding-top: 2%;
+}
+
+/* size smaller than Container  */
+.medium-container {
+    text-align: center;
+    margin-top: 2%;
+    max-width: 50%;
+    padding: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+  /* form styling, all text align left */
+.form {
+    text-align: left;
+    padding: 2%;
+}
+  
