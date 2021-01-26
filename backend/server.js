@@ -14,14 +14,19 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 app.use(cookieParser())
 
+let dbHost = process.env.DATABASE_HOST || 'localhost'
 mongoose.connect(
-    "mongodb://localhost:27017/users", 
-    {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+    `mongodb://${dbHost}:27017/users`, 
+    {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}
+  ).then(
+    () => console.log('connected with mongodb') , 
+    (err) => console.log(err)
+  )
 
-const authRoute = require('./routes/Authenticate')
-const registerRoute = require('./routes/Register')
-const privateRoute = require('./routes/Private')
-const verifyRoute = require('./routes/VerifyToken')
+const authRoute = require('./routes/authenticate')
+const registerRoute = require('./routes/register')
+const privateRoute = require('./routes/private')
+const verifyRoute = require('./routes/verifyToken')
 
 app.use('/auth', authRoute)
 app.use('/register', registerRoute)
