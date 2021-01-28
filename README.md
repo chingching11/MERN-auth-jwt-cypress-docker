@@ -21,7 +21,7 @@ The Dockerfiles in frontend and backend are based on the docker [node.js example
 
 ---
 
-## Run the app 
+## Run the app on localhost
 ```
 cd <frontend/backend>
 npm intall
@@ -31,7 +31,7 @@ Frontend (React) will run on port 3000 and Backend (Express) will run on port 80
 
 ---
 
-## Docker
+## Run Docker
  
 ##### Build client image
 ```
